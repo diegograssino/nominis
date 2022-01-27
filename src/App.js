@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider, useMediaQuery } from '@chakra-ui/react';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/700.css';
+import theme from './theme/theme';
+
+import MobileView from './Views/MobileView';
+import DesktopView from './Views/DesktopView';
 
 function App() {
+  const [isDesktop] = useMediaQuery('(min-width: 768px)');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChakraProvider theme={theme}>
+        {isDesktop ? <DesktopView /> : <MobileView />}
+      </ChakraProvider>
     </div>
   );
 }
