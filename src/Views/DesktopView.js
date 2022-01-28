@@ -25,7 +25,7 @@ function DesktopView({ game, user }) {
           </Box>
           <Spacer />
           <Box marginRight="1.5rem">
-            <LifesWidget />
+            <LifesWidget view="desktop" />
           </Box>
           <Box marginRight="20rem">
             <UserWidget user={user} />

@@ -4,7 +4,8 @@ function LifesWidget() {
   const fullHeart = `${process.env.PUBLIC_URL}/assets/full-heart.png`;
   const emptyHeart = `${process.env.PUBLIC_URL}/assets/empty-heart.png`;
 
-  const responsiveHearts = ['.5rem', '.7rem', '.9rem', '1.25rem', '1.5rem'];
+  const responsiveHearts = ['1.5rem', '1.5rem', '.8rem', '1.25rem', '1.5rem'];
+
   return (
     <Flex height="4rem">
       <Center>
@@ -40,7 +41,6 @@ function LifesWidget() {
         />
       </Center>
     </Flex>
-    // </Box>
   );
 }
 
