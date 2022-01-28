@@ -1,6 +1,7 @@
 import { Box, Flex, Spacer, Text, Heading } from '@chakra-ui/react';
 import Game from '../components/Game';
 import LifesWidget from '../components/LifesWidget';
+import SoundWidget from '../components/SoundWidget';
 import UserWidget from '../components/UserWidget';
 
 function DesktopView({ game, user }) {
@@ -31,7 +32,9 @@ function DesktopView({ game, user }) {
             <UserWidget user={user} />
           </Box>
           <Spacer />
-          <Box alignContent="end">Volume</Box>
+          <Box alignContent="end">
+            <SoundWidget />
+          </Box>
         </Flex>
         <Flex>
           <Box>
