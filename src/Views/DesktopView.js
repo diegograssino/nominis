@@ -19,10 +19,12 @@ function DesktopView({ game, user }) {
       <Box>
         <Flex>
           <Box color="red.600">
-            <Heading as="h2" size="lg" lineHeight="3.5rem">
+            <Heading as="h2" size="lg">
               Story Title
             </Heading>
-            <Text fontSize="2xl">Episode 1</Text>
+            <Text fontSize="2xl" lineHeight="3.5rem">
+              Episode 1
+            </Text>
           </Box>
           <Spacer />
           <Box marginRight="1.5rem">
