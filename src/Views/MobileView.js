@@ -1,6 +1,7 @@
 import { Box, Flex, Spacer, Text, Heading } from '@chakra-ui/react';
+import Game from '../components/Game';
 
-function MobileView() {
+function MobileView({ game }) {
   return (
     <Box
       minHeight="100vh"
@@ -10,6 +11,7 @@ function MobileView() {
       bgImage="url('assets/mobile-background.png')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
+      backgroundSize="cover"
     >
       <Box minHeight="50vh">
         <Flex>
@@ -19,11 +21,11 @@ function MobileView() {
             </Heading>
           </Box>
           <Spacer />
-          <Box>Hearts</Box>
+          <Box>Lifes</Box>
           <Spacer />
           <Box alignContent="end">Volume</Box>
         </Flex>
-        <Box>
+        <Box minHeight="50vh">
           <Text marginTop="30px" fontSize="4xl" fontWeight="500">
             Let&apos;s practice
           </Text>
@@ -35,8 +37,8 @@ function MobileView() {
       <Box>
         <Flex>
           <Spacer />
-          <Box marginStart="20%" minWidth="35%">
-            Game
+          <Box>
+            <Game game={game} />
           </Box>
         </Flex>
       </Box>
