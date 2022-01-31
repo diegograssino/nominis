@@ -1,8 +1,26 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { useState } from 'react';
 
 function Game({ game }) {
+  const solvedSentence = [];
+  game.words.map((word) => solvedSentence.push(word.text));
+
+  const [solution, setSolution] = useState('');
+  const [position, setPosition] = useState(0);
+
   function handleClick(w) {
-    console.log(`${w} was clicked`);
+    if (
+      position < solvedSentence.length &&
+      w.textDisordered === solvedSentence[position]
+    ) {
+      setSolution(`${solution} ${w.textDisordered}`);
+      setPosition(position + 1);
+    }
+  }
+
+  function restart() {
+    setSolution('');
+    setPosition(0);
   }
 
   return (
@@ -12,6 +30,7 @@ function Game({ game }) {
           width="1.5rem"
           height="1.5rem"
           src={`${process.env.PUBLIC_URL}/assets/reload.png`}
+          onClick={() => restart()}
         />
       </Flex>
       <Box
@@ -24,7 +43,7 @@ function Game({ game }) {
         paddingY=".75rem"
       >
         <Text fontSize="3xl" fontWeight="500" color="gray.600">
-          Hola
+          {solution}
         </Text>
       </Box>
       <Flex marginTop="2.5rem" wrap="wrap">
@@ -42,8 +61,12 @@ function Game({ game }) {
             as="button"
             onClick={() => handleClick(word)}
           >
-            <Text fontSize="3xl" fontWeight="500" color="gray.600">
-              {word}
+            <Text
+              fontSize="3xl"
+              fontWeight="500"
+              color={word.idDisordered >= position ? 'gray.600' : 'gray.300'}
+            >
+              {word.textDisordered}
             </Text>
           </Box>
         ))}

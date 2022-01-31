@@ -15,7 +15,7 @@ function MobileView({ game }) {
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
     >
-      <Box minHeight="50vh">
+      <Box>
         <Flex>
           <Box color="red.600">
             <Heading as="h2" size="md">
@@ -31,8 +31,8 @@ function MobileView({ game }) {
             <SoundWidget />
           </Box>
         </Flex>
-        <Box minHeight="50vh">
-          <Text marginTop="30px" fontSize="4xl" fontWeight="500">
+        <Box minHeight="32vh">
+          <Text marginTop="0rem" fontSize="4xl" fontWeight="500">
             Let&apos;s practice
           </Text>
           <Text marginTop="15px" fontSize="xl">

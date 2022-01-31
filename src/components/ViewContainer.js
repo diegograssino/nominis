@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
 
 import MobileView from '../Views/MobileView';
@@ -10,20 +9,12 @@ import userData from '../database/user';
 function ViewContainer() {
   const [isDesktop] = useMediaQuery('(min-width: 768px)');
 
-  const [game, setGame] = useState([]);
-  const [user, setUser] = useState([]);
-
-  useEffect(() => {
-    setGame(data);
-    setUser(userData);
-  }, []);
-
   return (
     <div>
       {isDesktop ? (
-        <DesktopView game={game} user={user} />
+        <DesktopView game={data} user={userData} />
       ) : (
-        <MobileView game={game} user={user} />
+        <MobileView game={data} user={userData} />
       )}
     </div>
   );
