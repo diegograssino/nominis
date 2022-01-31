@@ -8,7 +8,7 @@ function DesktopView({ game, user }) {
   return (
     <Box
       minHeight="100vh"
-      paddingTop="1.5rem"
+      paddingTop="2rem"
       paddingX="2.5rem"
       paddingBottom="4rem"
       bgImage="url('assets/desktop-background.png')"
@@ -28,7 +28,7 @@ function DesktopView({ game, user }) {
           </Box>
           <Spacer />
           <Box marginRight="1.5rem">
-            <LifesWidget view="desktop" />
+            <LifesWidget align="center" />
           </Box>
           <Box marginRight="20rem">
             <UserWidget user={user} />
@@ -58,7 +58,7 @@ function DesktopView({ game, user }) {
             </Text>
           </Box>
           <Spacer />
-          <Box marginStart="20%" minWidth="35%">
+          <Box marginStart="10%" minWidth="40%">
             <Game game={game} />
           </Box>
         </Flex>

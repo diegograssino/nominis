@@ -1,6 +1,7 @@
 import { Box, Flex, Spacer, Text, Heading } from '@chakra-ui/react';
 import Game from '../components/Game';
 import LifesWidget from '../components/LifesWidget';
+import SoundWidget from '../components/SoundWidget';
 
 function MobileView({ game }) {
   return (
@@ -17,16 +18,18 @@ function MobileView({ game }) {
       <Box minHeight="50vh">
         <Flex>
           <Box color="red.600">
-            <Heading as="h2" size="lg">
+            <Heading as="h2" size="md">
               Nominis
             </Heading>
           </Box>
           <Spacer />
           <Box>
-            <LifesWidget view="mobile" />
+            <LifesWidget align="start" />
           </Box>
           <Spacer />
-          <Box alignContent="end">Volume</Box>
+          <Box alignContent="end">
+            <SoundWidget />
+          </Box>
         </Flex>
         <Box minHeight="50vh">
           <Text marginTop="30px" fontSize="4xl" fontWeight="500">

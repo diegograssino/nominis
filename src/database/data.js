@@ -1,5 +1,5 @@
 const data = {
-  name: 'words',
+  game: 'words',
   words: ['I', 'brush', 'my', 'teeth.'],
 };
 
