@@ -1,5 +1,6 @@
 # Challlenge Nominis
 
+Repo: https://github.com/diegograssino/nominis
 Depoloyed on Vercel: https://nominis.vercel.app/
 
 ### Assumptions made
